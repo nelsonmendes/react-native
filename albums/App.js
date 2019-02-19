@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import Greeting from './src/components/Greeting';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center'}}>
-        <Greeting name='Rexxar' />
-        <Greeting name='Jaina' />
-        <Greeting name='Valeera' />
+      <View 
+      style={{ alignItems: 'center',
+            backgroundColor: '#fff',
+            width: '100%',
+            height: '100%',
+            flex: 1,
+           }}
+      >
+        <Header name='Valeera' />
+        <AlbumList />
       </View>
     );
   }
