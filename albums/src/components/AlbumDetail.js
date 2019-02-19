@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const styles = StyleSheet.create({
     black: {
@@ -47,6 +48,11 @@ export default class AlbumDetail extends Component {
             </CardSection>
             <CardSection>
                 <Image style={styles.imageStyle} source={{ uri: this.props.album.image}}/>
+            </CardSection>
+            <CardSection>
+                <Button onPress={() => Linking.openURL(this.props.album.url)}>
+                    Buy Now
+                </Button>
             </CardSection>
         </Card>
     );
